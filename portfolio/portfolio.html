@@ -3,34 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ryan Jaspart, développeur web freelance. Sites vitrines et landing pages pour indépendants et petites entreprises.">
   <title>Ryan Jaspart — Développeur Web</title>
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="portfolio.css">
-
 </head>
 <body>
 
-  <header>
-    <div class="header-top">
-      <div>
-        <h1>Ryan Jaspart</h1>
-        <p>Développeur web freelance</p>
-      </div>
+  <header class="site-header">
+    <a href="#accueil" class="logo">Ryan<span>.</span></a>
 
-      <button
-        id="menu-toggle"
-        class="menu-toggle"
-        type="button"
-        aria-label="Ouvrir le menu"
-        aria-expanded="false"
-      >☰</button>
-    </div>
+    <button
+      id="menu-toggle"
+      class="menu-toggle"
+      type="button"
+      aria-label="Ouvrir le menu"
+      aria-expanded="false"
+    >☰</button>
 
     <nav id="nav-menu">
-      <a href="#accueil">Accueil</a>
       <a href="#apropos">À propos</a>
       <a href="#competences">Compétences</a>
       <a href="#projets">Projets</a>
@@ -41,43 +37,110 @@
   <main>
 
     <section id="accueil" class="hero">
-      <h2>Création de sites web clairs et fonctionnels</h2>
-      <p>Landing pages, sites vitrines et intégration maquette pour indépendants et petites entreprises. Livraison rapide, code propre.</p>
-      <a href="#contact" class="btn">Me contacter</a>
+      <div class="hero-inner hero-animate">
+        <p class="hero-label">Développeur web freelance</p>
+        <h1>Ryan Jaspart</h1>
+        <p class="hero-text">Je crée des sites web clairs et fonctionnels pour indépendants et petites entreprises — landing pages, vitrines et intégration maquette.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Me contacter</a>
+          <a href="#projets" class="btn btn-outline">Voir mes projets</a>
+        </div>
+      </div>
     </section>
 
-    <section id="apropos" class="fade-in">
-      <h2>À propos</h2>
-      <p>Après ma réussite de la piscine 42, je me suis spécialisé dans le développement web front-end. J'aide les clients à obtenir une présence en ligne professionnelle, sans complexité inutile.</p>
+    <div class="zone-apropos">
+    <section id="apropos" class="section fade-in">
+      <p class="section-label">À propos</p>
+      <h2>Du code utile, pas du superflu</h2>
+      <div class="apropos-grid">
+        <p>Après ma réussite de la piscine 42, je me suis orienté vers le développement web front-end. J'accompagne mes clients vers une présence en ligne professionnelle — sans complexité inutile, avec un code propre et livrable rapidement.</p>
+        <ul class="apropos-highlights">
+          <li>
+            <strong>42</strong>
+            <span>Piscine réussie</span>
+          </li>
+          <li>
+            <strong>Front-end</strong>
+            <span>HTML · CSS · JS</span>
+          </li>
+          <li>
+            <strong>Formation</strong>
+            <span>Autodidacte</span>
+          </li>
+        </ul>
+      </div>
     </section>
+    </div>
 
-    <section id="competences" class="fade-in">
-      <h2>Compétences</h2>
-      <ul>
-        <li>HTML & CSS — intégration de maquettes</li>
-        <li>Design responsive — mobile, tablette, desktop</li>
-        <li>Pages vitrines & landing pages</li>
-        <li>Code propre et maintenable</li>
-      </ul>
-    </section>
-
-    <section id="projets" class="fade-in">
-      <h2>Projets</h2>
-
-      <div class="projets-container">
-        <article>
-          <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80" alt="Capture du portfolio Ryan Jaspart">
-          <h3>Portfolio développeur web</h3>
-          <p>Site one-page responsive avec validation JS, menu mobile et scroll fluide. HTML, CSS et JavaScript pur.</p>
+    <div class="zone-dark">
+    <section id="competences" class="section fade-in">
+      <p class="section-label">Compétences</p>
+      <h2>Ce que je propose</h2>
+      <div class="skills-grid">
+        <article class="skill-card">
+          <h3>Intégration web</h3>
+          <p>HTML sémantique et CSS soigné à partir de maquettes ou de briefs clients.</p>
+        </article>
+        <article class="skill-card">
+          <h3>Design responsive</h3>
+          <p>Sites adaptés mobile, tablette et desktop — testés sur tous les formats.</p>
+        </article>
+        <article class="skill-card">
+          <h3>Sites vitrines</h3>
+          <p>Landing pages et one-pages pour artisans, commerces et indépendants.</p>
+        </article>
+        <article class="skill-card">
+          <h3>JavaScript</h3>
+          <p>Menu mobile, formulaires, animations au scroll et interactions légères.</p>
         </article>
       </div>
     </section>
 
-    <section id="contact" class="fade-in">
-      <h2>Contact</h2>
-      <p>Un projet ? Une question ? Écrivez-moi.</p>
+    <section id="projets" class="section fade-in">
+      <p class="section-label">Projets</p>
+      <h2>Réalisations récentes</h2>
 
-      <form id="contact-form" action="#" method="post" novalidate>
+      <div class="projets-grid">
+        <article class="project-card">
+          <div class="project-image">
+            <img src="Portfolio.png" alt="Capture du portfolio Ryan Jaspart">
+          </div>
+          <div class="project-body">
+            <h3>Portfolio développeur</h3>
+            <p>Site one-page responsive avec formulaire contact, menu mobile et animations au scroll.</p>
+            <div class="project-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image">
+            <img src="pain-dore.PNG" alt="Capture du site Le Pain Doré — boulangerie artisanale">
+          </div>
+          <div class="project-body">
+            <h3>Le Pain Doré <span class="project-fictif">(Fictif)</span></h3>
+            <p>Site vitrine fictif pour une boulangerie artisanale — hero, produits, horaires et réseaux.</p>
+            <div class="project-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    </div>
+
+    <div class="zone-contact">
+    <section id="contact" class="section contact-section fade-in">
+      <p class="section-label">Contact</p>
+      <h2>Travaillons ensemble</h2>
+      <p class="contact-intro">Un projet, une question ? Décrivez-moi votre besoin — je vous réponds rapidement.</p>
+
+      <form id="contact-form" class="contact-form" action="https://formspree.io/f/xyegleav" method="post" novalidate>
 
         <div class="form-group">
           <label for="nom">Nom</label>
@@ -97,11 +160,12 @@
           <span class="error-message" id="message-error"></span>
         </div>
 
-        <button type="submit">Envoyer</button>
+        <button type="submit" class="btn btn-primary btn-full">Envoyer</button>
         <p id="form-success" class="form-success" hidden>Message envoyé !</p>
 
       </form>
     </section>
+    </div>
 
   </main>
 

@@ -1,4 +1,6 @@
 const form = document.querySelector("#contact-form");
+const FORMSPREE_URL = form.action;
+
 const inputNom = document.querySelector("#nom");
 const inputEmail = document.querySelector("#email");
 const inputMessage = document.querySelector("#message");
@@ -37,31 +39,54 @@ form.addEventListener("submit", (event) => {
     return;
   }
 
-  formSuccess.hidden = false;
-  formSuccess.textContent = "Message envoyé ! Je vous répondrai bientôt.";
-  form.reset();
+  if (FORMSPREE_URL.includes("VOTRE_ID")) {
+    messageError.textContent = "Formulaire non configuré — remplacez VOTRE_ID par votre ID Formspree.";
+    return;
+  }
+
+  const bouton = form.querySelector('button[type="submit"]');
+  bouton.disabled = true;
+
+  fetch(FORMSPREE_URL, {
+    method: "POST",
+    body: new FormData(form),
+    headers: { Accept: "application/json" },
+  })
+    .then((response) => {
+      if (response.ok) {
+        formSuccess.hidden = false;
+        formSuccess.textContent = "Message envoyé ! Je vous répondrai bientôt.";
+        form.reset();
+      } else {
+        messageError.textContent = "Erreur lors de l'envoi. Réessayez plus tard.";
+      }
+    })
+    .catch(() => {
+      messageError.textContent = "Erreur réseau. Réessayez plus tard.";
+    })
+    .finally(() => {
+      bouton.disabled = false;
+    });
 });
 
 menuToggle.addEventListener("click", () => {
-  navMenu.classList.toggle("nav-open");
+  const ouvert = navMenu.classList.toggle("nav-open");
+  menuToggle.setAttribute("aria-expanded", ouvert);
 });
 
-navMenu.querySelectorAll("a").forEach((lien) => {
+document.querySelectorAll('a[href^="#"]').forEach((lien) => {
   lien.addEventListener("click", (event) => {
-    event.preventDefault();
     const href = lien.getAttribute("href");
+    if (!href || href === "#") return;
+
     const section = document.querySelector(href);
     if (section) {
+      event.preventDefault();
       section.scrollIntoView({ behavior: "smooth" });
+      navMenu.classList.remove("nav-open");
+      menuToggle.setAttribute("aria-expanded", "false");
     }
-    navMenu.classList.remove("nav-open");
   });
-});
-
-const btnContact = document.querySelector("#accueil .btn");
-btnContact.addEventListener("click", (event) => {
-  event.preventDefault();
-  document.querySelector("#contact").scrollIntoView({ behavior: "smooth" });
 });
 
 const fadeElements = document.querySelectorAll(".fade-in");
@@ -72,6 +97,6 @@ const fadeObserver = new IntersectionObserver((entries) => {
       entry.target.classList.add("visible");
     }
   });
-}, { threshold: 0.15 });
+}, { threshold: 0.2, rootMargin: "0px 0px -60px 0px" });
 
 fadeElements.forEach((element) => fadeObserver.observe(element));
