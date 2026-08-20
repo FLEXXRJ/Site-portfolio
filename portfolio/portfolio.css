@@ -358,6 +358,9 @@ button.btn-primary:disabled {
 
 .project-body {
   padding: 1.5rem 1.75rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .project-body h3 {
@@ -393,6 +396,21 @@ button.btn-primary:disabled {
   border-radius: 999px;
   background: rgba(212, 168, 83, 0.2);
   color: var(--gold);
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: auto;
+  padding-top: 1rem;
+  color: var(--gold);
+  font-weight: 600;
+  font-size: 0.925rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.project-link:hover {
+  color: var(--gold-hover);
 }
 
 .contact-section {
