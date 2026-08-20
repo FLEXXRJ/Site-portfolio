@@ -415,16 +415,19 @@ button.btn-primary:disabled {
 
 .contact-section {
   padding-bottom: 6rem;
+  text-align: center;
 }
 
 .contact-intro {
-  margin: -1.5rem 0 2rem;
+  margin: -1.5rem auto 2rem;
   color: var(--text-muted);
   max-width: 480px;
 }
 
 .contact-form {
   max-width: 520px;
+  margin: 0 auto;
+  text-align: left;
   background: var(--surface-glass);
   border: 1px solid rgba(255, 253, 249, 0.08);
   padding: 2rem;
