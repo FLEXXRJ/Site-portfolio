@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Le Pain Doré, boulangerie artisanale à Lyon. Baguettes tradition, viennoiseries pur beurre et pains spéciaux. 12 rue des Farines, 69001 Lyon.">
+  <title>Le Pain Doré — Boulangerie artisanale</title>
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <!-- Polices du brief : Playfair (titres) + Lato (texte) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="header-brand-link">
+      <div class="header-brand">
+        <h1>Le Pain Doré</h1>
+        <p>Boulangerie artisanale</p>
+      </div>
+    </a>
+
+    <button
+      id="menu-toggle"
+      class="menu-toggle"
+      type="button"
+      aria-label="Ouvrir le menu"
+    >☰</button>
+
+    <nav id="nav-menu">
+      <a href="#accueil">Accueil</a>
+      <a href="histoire.html">Notre histoire</a>
+      <a href="#produits">Produits</a>
+      <a href="#horaires">Horaires & adresse</a>
+      <a href="#reseaux">Réseaux</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero plein écran -->
+    <section id="accueil" class="hero">
+      <div class="hero-content hero-animate">
+        <p class="hero-label">Boulangerie artisanale</p>
+        <h2 class="hero-nom">Le Pain Doré</h2>
+        <p class="hero-accroche">Le bon pain, fait maison chaque matin</p>
+        <p class="hero-texte">Baguettes croustillantes, viennoiseries pur beurre et pains spéciaux.
+           Fabriqués sur place avec des farines locales depuis 1987.</p>
+        <div class="hero-actions">
+          <a href="#horaires" class="btn">Nous trouver</a>
+          <a href="tel:0478000000" class="btn btn-outline">Appeler</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Produits : image à gauche, description à droite -->
+    <section id="produits">
+      <div class="section-header">
+        <p class="section-label">La boutique</p>
+        <h2>Nos spécialités</h2>
+      </div>
+      <div class="produits-grid">
+
+        <article class="produit-card fade-in">
+          <div class="produit-image">
+            <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=800&q=80" alt="Baguette tradition">
+          </div>
+          <div class="produit-info">
+            <h3>Baguette tradition</h3>
+            <p>Farine T65, levain naturel, cuisson au four à sole. Croustillante dehors, moelleuse dedans.</p>
+            <div class="prix-bloc">
+              <span class="prix-label">À partir de</span>
+              <span class="prix">1,20 €</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="produit-card fade-in">
+          <div class="produit-image">
+            <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=800&q=80" alt="Croissant pur beurre">
+          </div>
+          <div class="produit-info">
+            <h3>Croissant pur beurre</h3>
+            <p>Pâte feuilletée au beurre AOP, façonné à la main chaque matin dès 5h.</p>
+            <div class="prix-bloc">
+              <span class="prix-label">À partir de</span>
+              <span class="prix">1,40 €</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="produit-card fade-in">
+          <div class="produit-image">
+            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&q=80" alt="Pain de campagne">
+          </div>
+          <div class="produit-info">
+            <h3>Pain de campagne</h3>
+            <p>Meule T80, mie généreuse, conservation 3 jours. Parfait pour vos tartines.</p>
+            <div class="prix-bloc">
+              <span class="prix-label">À partir de</span>
+              <span class="prix">3,50 €</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <div class="zone-infos">
+    <!-- Horaires + adresse -->
+    <section id="horaires" class="fade-in">
+      <div class="section-header">
+        <p class="section-label">Infos pratiques</p>
+        <h2>Horaires & adresse</h2>
+      </div>
+      <div class="horaires-bloc">
+        <div>
+          <h3>Nos horaires</h3>
+          <ul>
+            <li><strong>Lundi – Vendredi</strong> : 7h – 19h30</li>
+            <li><strong>Samedi</strong> : 7h – 19h</li>
+            <li><strong>Dimanche</strong> : 7h30 – 13h</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Où nous trouver</h3>
+
+          <div class="info-ligne">
+            <svg class="info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+            </svg>
+            <p>12 rue des Farines<br>69001 Lyon</p>
+          </div>
+
+          <div class="info-ligne">
+            <svg class="info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.85 21 3 13.15 3 3a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z"/>
+            </svg>
+            <p><a href="tel:0478000000">04 78 00 00 00</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Réseaux sociaux (remplace le formulaire contact) -->
+    <section id="reseaux" class="fade-in">
+      <div class="section-header">
+        <p class="section-label">En ligne</p>
+        <h2>Suivez-nous</h2>
+      </div>
+      <p>Nos créations du jour, coulisses du four et nouveautés — retrouvez-nous en ligne.</p>
+
+      <div class="reseaux-links">
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm5.25-2.4a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2z"/>
+          </svg>
+        </a>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M13.5 22v-8h2.7l.4-3.1H13.5V9.1c0-.9.2-1.5 1.5-1.5h1.6V4.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10.9H7.5v3.1h2.9V22h3.1z"/>
+          </svg>
+        </a>
+        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M16.5 3c.4 2.2 1.8 3.9 3.9 4.2v3.1c-1.4 0-2.7-.4-3.9-1.2v6.7a5.9 5.9 0 1 1-5.3-5.9c.3 0 .6 0 .9.1v3.3a2.6 2.6 0 1 0 1.8 2.5V3h2.6z"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h3>Le Pain Doré</h3>
+        <p class="footer-tagline">Boulangerie artisanale · Lyon 1<sup>er</sup></p>
+        <p>12 rue des Farines<br>69001 Lyon</p>
+      </div>
+      <div class="footer-col">
+        <h3>Horaires</h3>
+        <p>Lun – Ven : 7h – 19h30</p>
+        <p>Samedi : 7h – 19h</p>
+        <p>Dimanche : 7h30 – 13h</p>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p><a href="tel:0478000000">04 78 00 00 00</a></p>
+        <div class="footer-reseaux">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
+        </div>
+      </div>
+    </div>
+    <p class="footer-copy">&copy; 2026 Le Pain Doré — Tous droits réservés</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
